@@ -16,6 +16,14 @@ getAllManga(): Observable<MangasModel[]> {
   return this.http.get<MangasModel[]>('http://localhost:8080/mangas')
 }
 
+getByIdManga(id: number): Observable<MangasModel> {
+  return this.http.get<MangasModel>(`http://localhost:8080/mangas/${id}`)
+}
+
+getByTituloManga(titulo: string): Observable<MangasModel[]>{
+  return this.http.get<MangasModel[]>(`http://localhost:8080/mangas/titulo/${titulo}`)
+}
+
 postManga(manga: MangasModel): Observable<MangasModel>{
   return this.http.post<MangasModel>('http://localhost:8080/mangas', manga)
 }

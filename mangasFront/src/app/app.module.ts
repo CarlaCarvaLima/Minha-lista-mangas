@@ -10,6 +10,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { MangasComponent } from './mangas/mangas.component';
 import { FormsModule } from '@angular/forms';
+import { MangaEditComponent } from './edit/manga-edit/manga-edit.component';
+import { MangaDeleteComponent } from './delete/manga-delete/manga-delete.component';
+import { MangaListComponent } from './list/manga-list/manga-list.component';
 
 
 @NgModule({
@@ -17,7 +20,10 @@ import { FormsModule } from '@angular/forms';
     MangasComponent,
     AppComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    MangaEditComponent,
+    MangaDeleteComponent,
+    MangaListComponent
 
   ],
   imports: [

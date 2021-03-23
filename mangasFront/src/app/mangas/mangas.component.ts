@@ -15,7 +15,7 @@ export class MangasComponent implements OnInit {
   idManga: number
 
   constructor(
-    private mangasService: MangasService,
+    private mangasService: MangasService
   ) { }
 
   ngOnInit() {

@@ -68,11 +68,14 @@
               <small class="text-muted"> Volume: {{item.volume}}</small>
               <br>
               <small class="text-muted"> Autor: {{item.autor}}</small>
+              <br>
+              <button class="btn btn-success mr-3" [routerLink]="['/manga-edit', item.id]" >Editar</button>
+              <button class="btn btn-danger" [routerLink]="['/manga-delete', item.id]" >Deletar</button>
             </div>
           </div>
         </div>
   
       </div>
     </div>
-  
-  
+
+    
