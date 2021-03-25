@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MangasModel } from '../model/MangasModel';
+import { AlertsService } from '../service/alerts.service';
 import { MangasService } from '../service/mangas.service';
 
 
@@ -19,7 +20,8 @@ export class MangasComponent implements OnInit {
   reverse = true
 
   constructor(
-    private mangasService: MangasService
+    private mangasService: MangasService,
+    private alert : AlertsService
   ) { }
 
   ngOnInit() {
@@ -38,7 +40,7 @@ export class MangasComponent implements OnInit {
 
     this.mangasService.postManga(this.manga).subscribe((resp: MangasModel) => {
       this.manga = resp
-      alert('Mangá cadastrado com sucesso!')
+      this.alert.showAlertSuccess('Mangá cadastrado com sucesso!')
       this.manga = new MangasModel()
       this.getAllManga()
     })

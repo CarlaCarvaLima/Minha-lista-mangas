@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MangasModel } from 'src/app/model/MangasModel';
+import { AlertsService } from 'src/app/service/alerts.service';
 import { MangasService } from 'src/app/service/mangas.service';
 
 @Component({
@@ -15,7 +16,8 @@ export class MangaDeleteComponent implements OnInit {
   constructor(
     private mangasService : MangasService,
     private route : ActivatedRoute,
-    private router : Router
+    private router : Router,
+    private alert : AlertsService
   ){}  
 
   ngOnInit() {
@@ -33,7 +35,7 @@ export class MangaDeleteComponent implements OnInit {
 
   deletar(){
     this.mangasService.deleteManga(this.idManga).subscribe(()=>{
-      alert('Mangá deletado com sucesso!')
+      this.alert.showAlertDanger('Mangá deletado com sucesso!')
       this.router.navigate(['/mangas'])
     })
   }
