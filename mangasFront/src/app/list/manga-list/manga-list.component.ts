@@ -13,6 +13,9 @@ export class MangaListComponent implements OnInit {
   listaManga: MangasModel[]
   tituloManga: string
 
+  key = 'volume'
+  reverse = false
+
   constructor(
     private mangasService : MangasService
   ) { }

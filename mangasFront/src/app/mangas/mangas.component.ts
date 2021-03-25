@@ -15,6 +15,9 @@ export class MangasComponent implements OnInit {
   tituloManga: string
   idManga: number
 
+  key = 'id'
+  reverse = true
+
   constructor(
     private mangasService: MangasService
   ) { }

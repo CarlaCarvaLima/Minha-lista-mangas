@@ -1,66 +1,79 @@
-<p>manga-list works!</p>
-
-<div class="tab-content" id="nav-tabContent">
-    <div class="tab-pane fade show active" id="meusMangas" role="tabpanel"
-      aria-labelledby="nav-mangas-tab">
-      <div class="row mt-3 mb-3">
-        <div class="col-md-10 pr-0">
-          <input class="form-control w-100 mr-2" type="search" placeholder="Pesquisar mangá"
-            aria-label="Pesquisar" [(ngModel)]='tituloManga'>
-        </div>
-        <div class="col-md-2 pl-0">
-          <button class="btn btn-outline-warning w-100 " type="button"
-            (click)='findByTituloManga()'>Pesquisar</button>
-        </div>
-
-
+<div class="container mt-5 mb-5">
+  <div class="row">
+      <div class="col-md-12">
+          <h1 class="text-center">Pesquisar por título</h1>
       </div>
-      <div class="row">
-        <div class="card-columns">
-            <div class="card text-center" *ngFor='let item of listaManga'>
-              <div class="card-body bg2">
-                <h5 class="card-title m-0">{{item.titulo}}</h5>
-                <small class="text-muted"> Volume: {{item.volume}}</small>
-                <br>
-                <small class="text-muted"> Autor: {{item.autor}}</small>
-                <br>
-                <button class="btn btn-success mr-3" [routerLink]="['/manga-edit', item.id]" >Editar</button>
-                <button class="btn btn-danger" [routerLink]="['/manga-delete', item.id]" >Deletar</button>
+  </div>
+
+  <div class="row d-flex justify-content-center mb-4">
+      <div class="col-md-12">
+          <h3 class="d-flex justify-content-center mb-5">Digite o nome do mangá abaixo</h3>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="meusMangas" role="tabpanel"
+              aria-labelledby="nav-mangas-tab">
+              <div class="row mt-5 mb-3 d-flex justify-content-center">
+                <div class="col-md-6">
+                  <input class="form-control w-100 mr-2" type="search" placeholder="Pesquisar mangá"
+                    aria-label="Pesquisar" [(ngModel)]='tituloManga'>
+                </div>
+                <div class="col-md-2 pl-0">
+                  <button class="btn btn-outline-warning w-100 " type="button"
+                    (click)='findByTituloManga()'>Pesquisar</button>
+                </div>
+              </div>
+              <div class="row mt-5">
+                <div class="card-columns">
+                    <div class="card text-center" *ngFor='let item of listaManga | orderBy : key : reverse'>
+                      <div class="card-body bg2">
+                        <h5 class="card-title m-0">{{item.titulo}}</h5>
+                        <small class="text-muted"> Volume: {{item.volume}}</small>
+                        <br>
+                        <small class="text-muted"> Autor: {{item.autor}}</small>
+                        <br>
+                        <button class="btn btn-success mr-3 mt-3" [routerLink]="['/manga-edit', item.id]" >Editar</button>
+                        <button class="btn btn-danger mt-3" [routerLink]="['/manga-delete', item.id]" >Deletar</button>
+                      </div>
+                    </div>
+                  </div>
               </div>
             </div>
-          </div>
-      </div>
-    </div>
-
-    <div class="tab-pane fade" id="mangas-titulo" role="tabpanel" aria-labelledby="nav-presenca-tab">
-
-      <div class="row mt-3 mb-3">
-        <div class="col-md-10 pr-0">
-          <input class="form-control w-100" type="search" placeholder="Pesquisar mangá" aria-label="Pesquisar"
-            [(ngModel)]='tituloManga'>
-        </div>
-        <div class="col-md-2 pl-0">
-          <button class="btn btn-outline-warning  w-100" type="button"
-            (click)='findByTituloManga()'>Pesquisar</button>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12" *ngFor='let item of listaManga'>
-          <div *ngFor='let manga of item.titulo'>
-
-            <div class="card mt-5 mb-5">
-              <div class="card-header">
-                <div class="row d-flex align-items-center">
-                  <div class="col-md-12">
-                    <h5 class="card-title"> {{item.titulo}} </h5>
+        
+            <div class="tab-pane fade" id="mangas-titulo" role="tabpanel" aria-labelledby="nav-presenca-tab">
+        
+              <div class="row mt-3 mb-3">
+                <div class="col-md-10 pr-0">
+                  <input class="form-control w-100" type="search" placeholder="Pesquisar mangá" aria-label="Pesquisar"
+                    [(ngModel)]='tituloManga'>
+                </div>
+                <div class="col-md-2 pl-0">
+                  <button class="btn btn-outline-warning  w-100" type="button"
+                    (click)='findByTituloManga()'>Pesquisar</button>
+                </div>
+              </div>
+        
+              <div class="row">
+                <div class="col-md-12" *ngFor='let item of listaManga'>
+                  <div *ngFor='let manga of item.titulo'>
+        
+                    <div class="card mt-5 mb-5">
+                      <div class="card-header">
+                        <div class="row d-flex align-items-center">
+                          <div class="col-md-12">
+                            <h5 class="card-title"> {{item.titulo}} </h5>
+                          </div>
+                        </div>
+                      </div>
+        
+                    </div>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
-        </div>
+          <div class="d-flex justify-content-center">
+           
+          </div>
       </div>
-    </div>
   </div>
+</div>
+
