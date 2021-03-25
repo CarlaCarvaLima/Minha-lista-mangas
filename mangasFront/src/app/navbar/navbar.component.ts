@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MangasModel } from '../model/MangasModel';
-import { MangasService } from '../service/mangas.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,31 +8,14 @@ import { MangasService } from '../service/mangas.service';
 })
 export class NavbarComponent implements OnInit {
 
-  manga: MangasModel = new MangasModel()
-  tituloManga: string
-  listaManga: MangasModel[]
-
   constructor(
-    private mangasService: MangasService
+    private router : Router
   ) { }
 
   ngOnInit(){
-    window.scroll(0,0)
   }
 
-  getAllManga(){
-    this.mangasService.getAllManga().subscribe((resp: MangasModel[]) => {
-      this.listaManga = resp
-     })
-  }
-
-  findByTituloManga(){
-    if(this.tituloManga == ''){
-      this.getAllManga()
-    } else {
-      this.mangasService.getByTituloManga(this.tituloManga).subscribe((resp: MangasModel[]) => {
-        this.listaManga = resp
-      })
-    }
+  paginaPesquisa(){
+    this.router.navigate(['/manga-titulo'])    
   }
 }

@@ -12,6 +12,7 @@ export class MangasComponent implements OnInit {
 
   manga: MangasModel = new MangasModel()
   listaManga: MangasModel[]
+  tituloManga: string
   idManga: number
 
   constructor(

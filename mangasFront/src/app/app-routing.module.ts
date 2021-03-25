@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'mangas', component: MangasComponent },
   { path: 'manga-edit/:id', component: MangaEditComponent },
   { path: 'manga-delete/:id', component: MangaDeleteComponent },
-  { path: 'manga-titulo/:titulo', component:MangaListComponent }
+  { path: 'manga-titulo', component:MangaListComponent }
 ]
 
 @NgModule({
