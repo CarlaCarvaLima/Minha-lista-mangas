@@ -26,6 +26,9 @@
                     <div class="card text-center" *ngFor='let item of listaManga | orderBy : key : reverse'>
                       <div class="card-body bg2">
                         <h5 class="card-title m-0">{{item.titulo}}</h5>
+                        <br>
+                        <img src="{{item.foto}}" alt="capa mangá" width="150px" height="200px" class="">
+                        <br>
                         <small class="text-muted"> Volume: {{item.volume}}</small>
                         <br>
                         <small class="text-muted"> Autor: {{item.autor}}</small>

@@ -3,4 +3,5 @@ export class MangasModel {
     public titulo: string;
     public volume: number;
     public autor: string;
+    public foto: string;
 }
