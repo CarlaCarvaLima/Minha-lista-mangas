@@ -38,5 +38,7 @@ public class MangaModel {
 	
 	@NotNull
 	private String autor;
+	
+	private String foto;
 		
 }

@@ -30,6 +30,12 @@ public class MangaController {
 		return ResponseEntity.ok(mangaRepository.findAll());
 	}
 	
+	@GetMapping("/{id}")
+	public ResponseEntity<MangaModel> getByIdManga(@PathVariable long id){
+		return mangaRepository.findById(id).map(resp -> ResponseEntity.ok(resp))
+				.orElse(ResponseEntity.notFound().build());
+	}
+	
 	@GetMapping("/titulo/{titulo}")
 	public ResponseEntity<List<MangaModel>>GetByTitulo(@PathVariable String titulo){
 		return ResponseEntity.ok(mangaRepository.findAllByTituloContainingIgnoreCase(titulo));
