@@ -56,7 +56,7 @@ A tabela possui os end-points básicos (get, post, put e delete) e mais dois mé
 | Implementações                  |
 | ------------------------------- |
 | docker-compose.yml              |
-| Dockerfile (na pasta de deploy) |
+| Dockerfile  |
 | Dockerfile (na pasta da api)    |
 
 Realizei o deploy do back-end da minha aplicação através do Docker e mantive os conteiners na minha máquina de uso pessoal.
