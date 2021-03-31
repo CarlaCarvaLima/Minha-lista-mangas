@@ -1,4 +1,4 @@
-# Minha lista de mangás (em desenvolvimento...)
+# Minha lista de mangás 
 
 Projeto desenvolvido para organizar os meus mangás.
 
