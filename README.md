@@ -13,7 +13,9 @@ Para o Frontend, utilizei Angular, HTML, CSS, Bootstrap
 
 ## Imagem da página
 
-<img src= 'https://i.imgur.com/StBlP45.png' >
+<img src= 'https://i.imgur.com/Az81m8B.png'>
+
+<img src= 'https://i.imgur.com/2ffUCsD.png' >
 
 ## Documentação
 
