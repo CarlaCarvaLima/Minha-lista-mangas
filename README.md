@@ -9,13 +9,15 @@ Para o desenvolvimento do Backend, utilizei Java, Spring Boot para criar uma API
 Para o Frontend, utilizei Angular, HTML, CSS, Bootstrap
 ## Assista ao vídeo clicando na imagem logo abaixo
 
-[![Watch the video](https://i.imgur.com/StBlP45.png)](https://youtu.be/-pj8ghb3pQw)
+[![Watch the video](https://i.imgur.com/SuFQeuH.png)](https://youtu.be/-pj8ghb3pQw)
 
 ## Imagem da página
 
-<img src= 'https://i.imgur.com/Az81m8B.png'>
+<img src= 'https://i.imgur.com/SuFQeuH.png'>
 
-<img src= 'https://i.imgur.com/2ffUCsD.png' >
+<img src= 'https://i.imgur.com/tjeSMwM.png' >
+
+<img src= 'https://i.imgur.com/Hx62Fu4.png' >
 
 ## Documentação
 
