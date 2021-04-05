@@ -11,7 +11,7 @@ Para o Frontend, utilizei Angular, HTML, CSS, Bootstrap
 
 [![Watch the video](https://i.imgur.com/SuFQeuH.png)](https://youtu.be/-pj8ghb3pQw)
 
-## Imagem da página
+## Imagens das páginas
 
 <img src= 'https://i.imgur.com/SuFQeuH.png'>
 
